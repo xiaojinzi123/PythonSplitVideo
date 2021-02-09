@@ -48,7 +48,7 @@ if isTest:
     fillColor = "red"
     targetSplitVideoLength = 30
 # 视频真实显示区域的宽高比, 每个视频处理的时候, 必须重新赋值
-targetVideoRealAspectRatio = 962 / 538
+targetVideoRealAspectRatio = 962 / 510
 # 导出的 crop 的比例
 targetVideoExportCropAspectRatio = 16 / 9
 # 文字相对真实显示内容高度的比例
@@ -56,7 +56,7 @@ targetTextRatio = 10
 # 导出的视频最终比例, 其余部分补黑边
 targetVideoExportAspectRatio = 1 / 1
 # 目标视频文件
-targetVideoPath = "/Users/xiaojinzi/Documents/video/雷神1/雷神1.mp4"
+targetVideoPath = "/Users/xiaojinzi/Documents/video/钢铁侠3/钢铁侠3.mp4"
 targetVideoFolder = os.path.dirname(targetVideoPath)
 targetExportDir = targetVideoFolder + "/target"
 targetVideoName = os.path.basename(targetVideoPath)
@@ -226,7 +226,7 @@ for index2 in range(len(cropedList1)):
 
     # --------------- 绘制小金子标记文本
     textedAuthorSize = int(cropHeight / targetTextRatio * 3 / 5)
-    textedAuthorPath = targetExportDir + "/result/" + targetVideoName + "_" + str(index2 + 1) + ".mp4"
+    textedAuthorPath = targetExportDir + "/result/" + targetVideoSimpleName + "_" + str(index2 + 1) + ".mp4"
     textedAuthorParentPath = getParentPath(textedAuthorPath)
     if not os.path.exists(textedAuthorParentPath):
         os.mkdir(textedAuthorParentPath)
